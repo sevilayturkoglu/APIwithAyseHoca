@@ -5,6 +5,7 @@ import org.hamcrest.Matchers;
 import org.junit.Test;
 
 import static io.restassured.RestAssured.given;
+import static org.hamcrest.CoreMatchers.equalTo;
 
 public class C05_Get_ResponseBodyTesti {
     /*
@@ -22,7 +23,7 @@ public class C05_Get_ResponseBodyTesti {
         //url hazirla
         String url="https://jsonplaceholder.typicode.com/posts/44";
         //Response hazirla
-        Response response=given().when().get(url);
+       Response response=given().when().get(url);
         //istersen yazdir
         response.prettyPrint();
         response.then()

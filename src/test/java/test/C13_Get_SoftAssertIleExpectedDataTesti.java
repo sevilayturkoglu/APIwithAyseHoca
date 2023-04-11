@@ -43,7 +43,7 @@ public class C13_Get_SoftAssertIleExpectedDataTesti {
 
         Response response=given().when().get(url);
         response.prettyPrint();
-        //Assertion
+        //Assertion6
         JsonPath resJsPath = response.jsonPath();
         SoftAssert softAssert=new SoftAssert();
         softAssert.assertEquals(resJsPath.get("status"),expBody.get("status"));
@@ -53,7 +53,6 @@ public class C13_Get_SoftAssertIleExpectedDataTesti {
         softAssert.assertEquals(resJsPath.get("data.employee_salary"),expBody.getJSONObject("data").get("employee_salary"));
         softAssert.assertEquals(resJsPath.get("data.employee_age"),expBody.getJSONObject("data").get("employee_age"));
         softAssert.assertEquals(resJsPath.get("data.profile_image"),expBody.getJSONObject("data").get("profile_image"));
-
         softAssert.assertAll();
     }
 }

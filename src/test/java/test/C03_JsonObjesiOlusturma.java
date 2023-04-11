@@ -15,7 +15,7 @@ public class C03_JsonObjesiOlusturma {
        "userId":1
    }
    */
-    @Test
+   @Test
     public void jsonObje1() {
         JSONObject ilkJsonObje = new JSONObject();
         ilkJsonObje.put("title", "Ahmet");
@@ -30,10 +30,12 @@ public class C03_JsonObjesiOlusturma {
     dene.put("body","Merhaba");
     dene.put("userId",1);
     System.out.println(dene);
-    }
 
 
-    /*
+
+   }
+
+   /*
                 {
                  "firstname":"Jim",
                  "additionalneeds":"Breakfast",
@@ -63,16 +65,6 @@ public class C03_JsonObjesiOlusturma {
 
         System.out.println(outerJson);
 
-     /*   {"firstname":"Jim",
-           "additionalneeds":"Breakfast",
-           "bookingdates":{
-                    "checkin":"2018-01-01",
-                    "checkout":"2019-01-01"
-        },
-           "totalprice":111,
-           "depositpaid":true,
-           "lastname":"Brown"}
 
-            */
     }
 }

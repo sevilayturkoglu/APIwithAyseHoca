@@ -38,7 +38,8 @@ public class C10_Get_ResponseBodyTestiListKullanimi {
                 .contentType(ContentType.JSON).body(
                              "data.id", hasSize(24),
                         "data.employee_name",hasItem("Bradley Greer"),
-                                "data.employee_age",hasItems(61,43,30));
+                                "data.employee_age",hasItems(61,43,30),
+                                "status",containsString("success"));
     }
 
 }

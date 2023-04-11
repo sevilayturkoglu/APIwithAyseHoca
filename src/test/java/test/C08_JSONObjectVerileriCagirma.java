@@ -34,7 +34,7 @@ public class C08_JSONObjectVerileriCagirma {
 
         JSONObject cepTel=new JSONObject();
         cepTel.put("type", "iPhone");
-        cepTel.put("number", "0123-4567-8888");
+        cepTel.put("number", "0535-4567-8888");
 
         JSONObject evTel=new JSONObject();
         evTel.put("type", "home");
@@ -65,7 +65,7 @@ public class C08_JSONObjectVerileriCagirma {
         "lastName":"doe",
         "address":{
              "streetAddress":"naist street",
-             "postalCode":"Nara","postalCode":"630-0192"},
+             "city":"Nara","postalCode":"630-0192"},
         "age":26,
         "phoneNumbers":[
         {
@@ -79,6 +79,8 @@ public class C08_JSONObjectVerileriCagirma {
          }
 
          */
+
+
         System.out.println("Isim : " + kisiselBilgiler.get("firstName"));
         System.out.println("Soy Isim : " + kisiselBilgiler.get("lastName"));
         System.out.println("Age : " + kisiselBilgiler.get("age"));

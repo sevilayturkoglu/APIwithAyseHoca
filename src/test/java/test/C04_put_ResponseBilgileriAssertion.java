@@ -2,6 +2,7 @@ package test;
 
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
+import org.hamcrest.Matchers;
 import org.json.JSONObject;
 import org.junit.Test;
 
@@ -27,7 +28,7 @@ public class C04_put_ResponseBilgileriAssertion {
     public void put01(){
         //1-Request Url ve Body hazirla
         String url="https://jsonplaceholder.typicode.com/posts/70";
-        JSONObject reqBody=new JSONObject();
+        /* JSONObject reqBody=new JSONObject();
         reqBody.put("title","Ahmet");
         reqBody.put("body","Merhaba");
         reqBody.put("userId",10);
@@ -45,7 +46,7 @@ public class C04_put_ResponseBilgileriAssertion {
         response.then().assertThat().statusCode(200)
                 .contentType("application/json; charset=utf-8")
                 .header("Server","cloudflare")
-                .statusLine("HTTP/1.1 200 OK");
+                .statusLine("HTTP/1.1 200 OK");*/
 
 
     }

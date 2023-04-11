@@ -2,7 +2,7 @@ package test;
 
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
-import org.hamcrest.Matchers;
+
 import org.json.JSONObject;
 import org.junit.Test;
 
@@ -61,7 +61,7 @@ public class C09_Post_JsonPathIleBodyTesti {
                               .body(requestBody.toString())
                               .post(url);
         response.prettyPrint();
-       response.then()
+        response.then()
                  .assertThat()
                  .statusCode(200)
                  .contentType("application/json; charset=utf-8")

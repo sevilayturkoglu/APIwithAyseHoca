@@ -6,8 +6,8 @@ import org.hamcrest.Matchers;
 import org.junit.Test;
 
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.CoreMatchers.equalTo;
-import static org.hamcrest.CoreMatchers.nullValue;
+import static org.hamcrest.Matchers.*;
+
 
 public class C07_Get_BodyTekrarlardanKurtulma {
     /*
@@ -32,8 +32,8 @@ public class C07_Get_BodyTekrarlardanKurtulma {
         String url="https://restful-booker.herokuapp.com/booking/10";
         //Expected data
 
-        Response response=given().when().get(url);
-        response.prettyPrint();
+      Response response=given().when().get(url);
+      response.prettyPrint();
       /*  response.then()
                 .assertThat()
                 .contentType(ContentType.JSON)
@@ -43,15 +43,15 @@ public class C07_Get_BodyTekrarlardanKurtulma {
                         "depositpaid",Matchers.equalTo(true),
                         "additionalsneeds",Matchers.nullValue());*/
 
-//kisa yol
-        response.then()
+       //kisa yol
+              response.then()
                 .assertThat()
                 .contentType(ContentType.JSON)
-                .statusCode(200).body("firstname", equalTo("Eric"),
-                        "lastname",Matchers.equalTo("Jones"),
-                        "totalprice",equalTo(892),
-                        "depositpaid",equalTo(false),
-                        "additionalsneeds",equalTo("Breakfast"));
+                .statusCode(200).body("firstname", equalTo("James"),
+                        "lastname",Matchers.equalTo("Brown"),
+                        "totalprice",equalTo(111),
+                        "depositpaid",equalTo(true),
+                        "additionalsneeds",equalTo(""));
 
     }
 }

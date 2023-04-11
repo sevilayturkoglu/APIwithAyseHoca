@@ -5,8 +5,9 @@ import io.restassured.response.Response;
 import org.hamcrest.Matchers;
 import org.json.JSONObject;
 import org.junit.Test;
-
 import static io.restassured.RestAssured.given;
+import static org.hamcrest.Matchers.*;
+
 
 public class C06_Post_ResponseBodyTesti {
     /*  https://jsonplaceholder.typicode.com/posts
@@ -29,7 +30,50 @@ public class C06_Post_ResponseBodyTesti {
     public void post(){
         //post icin body hazirla
         String url="https://jsonplaceholder.typicode.com/posts";
-        //gonderecegin post body yi hazirla
+
+        JSONObject obj=new JSONObject();
+
+        obj.put("title","APPIUM");
+        obj.put("body","APPIUM ogrenmek ne guzel");
+        obj.put("userId",10);
+
+        Response response1=given().contentType(ContentType.JSON).body(obj.toString()).post(url);
+        response1.prettyPrint();
+
+        response1.then().assertThat().body("title",equalTo("APPIUM"),
+                "body",containsString("APPIUM"),"userId",lessThan(100));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     /*   //gonderecegin post body yi hazirla
         JSONObject posting=new JSONObject();
         posting.put("title","API");
         posting.put("body","API ogrenmek ne guzel");
@@ -49,6 +93,6 @@ response.prettyPrint();
                 .contentType("application/json")
                 .body("title", Matchers.equalTo("API"))
                 .body("userId",Matchers.lessThan(100))
-                .body("body",Matchers.containsString("API"));
+                .body("body",Matchers.containsString("API"));*/
     }
 }
