@@ -2,10 +2,13 @@ package testData;
 
 import org.json.JSONObject;
 
+import java.util.HashMap;
+
 public class TestDataJasonPlaceHolder {
 
-    public int basariliStatusCode=200;
-    public JSONObject expectedBodyOlusturJson(){
+    public int basariliStatusCode = 200;
+
+    public JSONObject expectedBodyOlusturJson() {
         /*{
             "userId":3,
                 "id":22,
@@ -14,11 +17,27 @@ public class TestDataJasonPlaceHolder {
             um mollitia molestiae aut atque rem suscipit\nnam impedit esse"
         }
         */
-        JSONObject expBody=new JSONObject();
-        expBody.put("userId",3);
-        expBody.put("id",22);
-        expBody.put("title","dolor sint quo a velit explicabo quia nam");
-        expBody.put("body","eos qui et ipsum ipsam suscipit aut\nsed omnis non odio\nexpedita earum mollitia molestiae aut atque rem suscipit\nnam impedit esse");
-        return  expBody;
+        JSONObject expBody = new JSONObject();
+        expBody.put("userId", 3);
+        expBody.put("id", 22);
+        expBody.put("title", "dolor sint quo a velit explicabo quia nam");
+        expBody.put("body", "eos qui et ipsum ipsam suscipit aut\nsed omnis non odio\nexpedita earum mollitia molestiae aut atque rem suscipit\nnam impedit esse");
+        return expBody;
+    }
+
+    public HashMap reqBodyOlusturMap() {
+   /* {
+        "title":"Ahmet",
+            "body":"Merhaba",
+            "userId":10,
+            "id":70
+    }*/
+        HashMap<String,Object> reqBody=new HashMap<>();
+        reqBody.put("title","Ahmet");
+        reqBody.put("body","Merhaba");
+        reqBody.put("userId",10.0);
+        reqBody.put("id",70.0);
+
+    return  reqBody;
     }
 }

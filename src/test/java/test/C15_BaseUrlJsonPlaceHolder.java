@@ -46,9 +46,6 @@ public class C15_BaseUrlJsonPlaceHolder extends JsonPlaceHolderBaseURL {
                 .statusCode(200)
                 .body("title", hasSize(100));//"title",Matchers.containsString("qui est esse"));//bunu dene
 
-
-
-
     }
     @Test
     public void get02(){
