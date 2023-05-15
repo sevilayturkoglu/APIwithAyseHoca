@@ -16,7 +16,7 @@ import static org.hamcrest.CoreMatchers.equalTo;
 public class C14_Odev extends DummyBaseUrl {
     /*
     C14_Post_SoftAssertIleExpectedDataTesti
-//https://dummy.restapiexample.com/api/v1/update/21 url’ine asagidaki body’ye sahip bir POST
+//https://dummy.restapiexample.com/api/v1/update/21 url’ine asagidaki body’ye sahip bir update put
 request gonderdigimizde donen response’un asagidaki gibi oldugunu test edin.
 Request Body
 {

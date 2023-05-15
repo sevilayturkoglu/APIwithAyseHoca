@@ -7,7 +7,8 @@ import java.util.HashMap;
 public class TestDataJasonPlaceHolder {
 
     public int basariliStatusCode = 200;
-
+    public String contentType="application/json; charset=utf-8";
+public String ConnectionHeader="keep-alive";
     public JSONObject expectedBodyOlusturJson() {
         /*{
             "userId":3,
@@ -32,12 +33,28 @@ public class TestDataJasonPlaceHolder {
             "userId":10,
             "id":70
     }*/
-        HashMap<String,Object> reqBody=new HashMap<>();
-        reqBody.put("title","Ahmet");
-        reqBody.put("body","Merhaba");
-        reqBody.put("userId",10.0);
-        reqBody.put("id",70.0);
+        HashMap<String, Object> reqBody = new HashMap<>();
+        reqBody.put("title", "Ahmet");
+        reqBody.put("body", "Merhaba");
+        reqBody.put("userId", 10.0);
+        reqBody.put("id", 70.0);
 
-    return  reqBody;
+        return reqBody;
+    }
+
+    public JSONObject reqBodyOlusturJson() {
+    /*
+    {
+"title": "Ahmet",
+"body": "Merhaba",
+"userId": 10,
+"id": 70
+}  */
+        JSONObject requPut = new JSONObject();
+        requPut.put("title", "Hello");
+        requPut.put("body", "Merhaba");
+        requPut.put("userId", 10);
+        requPut.put("id", 70);
+        return requPut;
     }
 }

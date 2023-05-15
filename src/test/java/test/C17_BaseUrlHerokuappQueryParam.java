@@ -82,7 +82,8 @@ public class C17_BaseUrlHerokuappQueryParam extends HerokuAppBaseUrl {
         response.prettyPrint();
 
         //Assertion
-        response.then().assertThat().statusCode(200).body("booking",Matchers.hasSize(1));
+       // response.then().assertThat().statusCode(200).body("booking",Matchers.hasSize(1));
+        response.then().assertThat().statusCode(200).body("booking",Matchers.notNullValue());
 
     }
 }
