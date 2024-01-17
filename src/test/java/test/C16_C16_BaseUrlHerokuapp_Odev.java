@@ -55,9 +55,10 @@ degerinin “Ahmet” oldugunu test edin
         },
             "additionalneeds" : "wi-fi"
         }*/
-        specHerokuApp.pathParam("pp1","booking");
-        Response response=given().spec(specHerokuApp).when().get("/{pp1}");
-       //response.prettyPrint();
+       // specHerokuApp.pathParam("pp1","booking");
+       // Response response=given().spec(specHerokuApp).when().get("/{pp1}");
+        Response response=given().when().get("/booking");//bunu ben yaptim
+       response.prettyPrint();
        // response.prettyPeek();
         TestDataJasonPlaceHolder status=new TestDataJasonPlaceHolder();
         response.then().assertThat().statusCode(status.basariliStatusCode).body("bookingid", Matchers.hasItems(12));

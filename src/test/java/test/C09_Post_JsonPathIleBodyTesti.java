@@ -57,7 +57,7 @@ public class C09_Post_JsonPathIleBodyTesti {
 
         Response response=given()
                               .contentType(ContentType.JSON)
-                          .when()
+                              .when()
                               .body(requestBody.toString())
                               .post(url);
         response.prettyPrint();
